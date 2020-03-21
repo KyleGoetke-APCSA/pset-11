@@ -28,6 +28,10 @@ public class Exercises {
   }
 
   public int findMeFaster(ArrayList<Integer> list, int target) {
+      if (list == null || list.size() == 0) {
+          return -1;
+      }
+
       int start = 0;
       int middle = 0;
       int end = list.size() - 1;
