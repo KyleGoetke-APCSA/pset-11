@@ -93,7 +93,7 @@ public class Exercises {
           }
       } else if (!ascending) {
           for (int i = arr.length; i > 1; i--) {
-              for (int j = arr.length; j > i - 1; j--) {
+              for (int j = arr.length-1; j > 0; j--) {
                   if (arr[j] > arr[j - 1]) {
                       int temp = arr[j];
                       arr[j] = arr[j - 1];
