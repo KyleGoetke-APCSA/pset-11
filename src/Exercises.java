@@ -120,6 +120,17 @@ public class Exercises {
                   }
               }
           }
+      } else if (!ascending) {
+          for (int i = arr.size(); i > 1; i--) {
+              for (int j = arr.size()-1; j > 0; j--) {
+                  if (arr.get(j).compareTo(arr.get(j-1)) > 0) {
+                      String temp = arr.get(j);
+                      arr.set(j, arr.get(j - 1));
+                      arr.set(j - 1, temp);
+                  }
+              }
+          }
+      }
       return arr;
   }
 
