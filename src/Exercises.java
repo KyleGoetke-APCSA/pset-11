@@ -28,27 +28,27 @@ public class Exercises {
   }
 
   public int findMeFaster(ArrayList<Integer> list, int target) {
-	  if (list == null || list.size() == 0) {
-		  return -1;
-	  }
+      if (list == null || list.size() == 0) {
+          return -1;
+      }
 
-	  int start = 0;
-	  int middle = 0;
-	  int end = list.size() - 1;
+      int start = 0;
+      int middle = 0;
+      int end = list.size() - 1;
 
-	  while (start <= end) {
-		  middle = (start + end) / 2;
-		  if (list.get(middle) == null) {
-			  continue;
-		  } else if (list.get(middle) < target) {
-			  start = middle + 1;
-		  } else if (list.get(middle) > target) {
-			  end = middle - 1;
-		  } else if (list.get(middle) == target) {
-			  return middle;
-		  }
-	  }
-	  return -1;
+      while (start <= end) {
+          middle = (start + end) / 2;
+          if (list.get(middle) == null) {
+              continue;
+          } else if (list.get(middle) < target) {
+              start = middle + 1;
+          } else if (list.get(middle) > target) {
+              end = middle - 1;
+          } else if (list.get(middle) == target) {
+              return middle;
+          }
+      }
+      return -1;
   }
 
   public int findMeFaster(String[] list, String target) {
