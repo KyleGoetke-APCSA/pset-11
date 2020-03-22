@@ -52,15 +52,15 @@ public class Exercises {
   }
 
   public int findMeFaster(String[] list, String target) {
-      if (list == null || target == null) {
+      if (list == null || list.length == 0 || target.equals(null)) {
           return -1;
       }
+
       int start = 0;
-      int middle = 0;
-      int end = list.length -1;
+      int end = list.length;
 
       while (start <= end) {
-          middle = (start + end) / 2;
+          int middle = (start + end) / 2;
           if (list[middle] == null) {
               continue;
           } else if (list[middle].compareTo(target) < 0) {
