@@ -38,9 +38,7 @@ public class Exercises {
 
       while (start <= end) {
           middle = (start + end) / 2;
-          if (list.get(middle) == null) {
-              continue;
-          } else if (list.get(middle) < target) {
+          if (list.get(middle) < target) {
               start = middle + 1;
           } else if (list.get(middle) > target) {
               end = middle - 1;
