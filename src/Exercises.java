@@ -130,6 +130,10 @@ public class Exercises {
   }
 
   public ArrayList<Integer> insertion(ArrayList<Integer> list, boolean ascending) {
+      if (list == null || list.size() == 0) {
+          return null;
+      }
+
       if (ascending) {
           for (int i = 1; i < list.size(); i++) {
               int key = list.get(i);
@@ -165,6 +169,9 @@ public class Exercises {
   }
 
   public String[] insertion(String[] list, boolean ascending) {
+      if (list == null || list.length == 0) {
+          return null;
+      }
       String temp;
       if (ascending) {
           for (int i = 1; i < list.length; i++) {
