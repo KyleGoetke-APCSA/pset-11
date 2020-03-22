@@ -131,17 +131,34 @@ public class Exercises {
   }
 
   public ArrayList<Integer> insertion(ArrayList<Integer> list, boolean ascending) {
-      for (int i = 1; i < list.size(); i++) {
-          int key = list.get(i);
-          for (int j = i-1; j >= 0; j--) {
-              if (key<list.get(j)) {
-                  list.set(j+1,list.get(j));
-                  if (j == 0) {
-                      list.set(0, key);
+      if (ascending) {
+          for (int i = 1; i < list.size(); i++) {
+              int key = list.get(i);
+              for (int j = i - 1; j >= 0; j--) {
+                  if (key < list.get(j)) {
+                      list.set(j + 1,list.get(j));
+                      if (j == 0) {
+                          list.set(0, key);
+                      }
+                  } else {
+                      list.set(j + 1, key);
+                      break;
                   }
-              } else {
-                  list.set(j + 1,key);
-                  break;
+              }
+          }
+      } else if (!ascending) {
+          for (int i = 1; i < list.size(); i++) {
+              int key = list.get(i);
+              for (int j = i - 1; j >= 0; j--) {
+                  if (key > list.get(j)) {
+                      list.set(j + 1,list.get(j));
+                      if (j == 0) {
+                          list.set(0, key);
+                      }
+                  } else {
+                      list.set(j + 1, key);
+                      break;
+                  }
               }
           }
       }
